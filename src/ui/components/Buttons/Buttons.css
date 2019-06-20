@@ -1,0 +1,6 @@
+.followed{
+  background-color: blue;
+}
+.followed, .unfollowed{
+  padding: 0px 24px;
+}

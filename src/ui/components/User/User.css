@@ -1,0 +1,49 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+.content{
+  width: 100%;
+  background-color: #FAFAFA;
+}
+.body{
+  width: 100%;
+  max-width: 975px;
+  margin: 0px auto;
+  padding: 130px 20px 0;
+  padding-bottom: 30px;
+  display: flex;
+}
+.userPic{
+  margin-right: 30px;
+  flex-basis: 450px;
+  max-width: 350px;
+  display: flex;
+  justify-content: center;
+  align-self: flex-start;
+}
+.img{
+  max-width: 150px;
+  border-radius: 50%;
+}
+
+.description{
+  display: flex;
+  flex-direction: column;
+
+  justify-content: flex-start;
+  width: 100%;
+}
+.description .userName{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+.description .followers{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+.description .about{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
