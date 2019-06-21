@@ -14,7 +14,7 @@ class Posts extends Component{
                 return(
                   <li key = {index} >
                   <NavLink to = {'/p/' + item.id}>
-                    < img src = {item.photo}  />
+                    <img src = {item.photo} />
                   </NavLink>
                   </li>
                 )

@@ -26,18 +26,17 @@
   width: 100%;max-width: 975px;
   display: grid;
   grid-template-columns: repeat(3,minmax(auto,1fr));
-  grid-column-gap: 25px;
-  grid-row-gap: 25px;
+  grid-gap: 25px;
   grid-template-rows: auto;
 }
 .grid ul li{
   height: 300px;
-  width: 300px;
+  width: 300px;overflow: hidden;
   display: flex;
   align-items: stretch;
+  justify-content: center;
 }
 .grid ul li img{
-  width: 300px;
   max-height: 300px;
-  height: 100%;
+  align-self: center;
 }

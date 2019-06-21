@@ -5,7 +5,6 @@ import {NavLink} from 'react-router-dom';
 
 class Tagged extends Component{
   render(){
-    console.log(this.props.tagged);
     return(
       <section>
         <div className = {styles.tagged}>
@@ -14,7 +13,7 @@ class Tagged extends Component{
               {this.props.tagged.map((item,index) => {
                 return(
                   <li key = {index} >
-                  <NavLink to = {'/p/' + item.id}>
+                  <NavLink to = {'/tagged/p/' + item.id}>
                     < img src = {item.photo} />
                   </NavLink>
                   </li>
