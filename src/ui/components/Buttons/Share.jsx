@@ -1,14 +1,12 @@
-import React, {Component} from 'react';
+import React from 'react';
 import styles from './Buttons.css';
 
-class Share extends Component{
-  render(){
-    return(
-      <div>
-        Share
-      </div>
-    )
-  }
+const Share = () =>{
+  return (
+    <div>
+      <div className={styles.share}></div>
+    </div>
+  );
 }
 
 export default Share;

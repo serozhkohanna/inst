@@ -1,14 +1,12 @@
-import React, {Component} from 'react';
+import React from 'react';
 import styles from './Buttons.css';
 
-class Comment extends Component{
-  render(){
-    return(
-      <div>
-        Comment
-      </div>
-    )
-  }
+const Comment = () =>{
+  return (
+    <div>
+      <div className={styles.comment}></div>
+    </div>
+  );
 }
 
 export default Comment;

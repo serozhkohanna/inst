@@ -1,11 +1,9 @@
-import React, {Component} from 'react';
+import React from 'react';
 import styles from './Buttons.css';
 
-class Report extends Component{
-  render(){
-    return <section>
-      <button>...</button>
-    </section>;
-  }
+const Report = () =>{
+  return <section>
+    <button className={styles.report}>...</button>
+  </section>;
 }
-export default Report
+export default Report; 

@@ -1,12 +1,15 @@
-*{padding: 0; margin: 0; box-sizing: border-box;}
+@value whiteBasic from '../../../css/colors.css';
+@value mainFontColor from '../../../css/colors.css';
 
-.content{
+.content, .scrolledContent{
   width: 100%;
-  background-color: #FFFFFF;
+  background-color: whiteBasic;
   position: fixed;
+  z-index: 666;
+  border-bottom: 1px solid rgba(0,0,0,.0975)
 }
-.nav{
-  background-color: #FFFFFF;
+ .scrolledContent .nav, .content .nav{
+  background-color: whiteBasic;
   max-width: 1010px;
   width: 100%;
   height: 77px;
@@ -15,4 +18,103 @@
 
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  transition: height .35s ease-in-out;
+}
+.scrolledContent .nav{
+  height: 52px;width: 100%;
+  transition: height .35s ease-in-out;
+}
+.label{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+.logo{
+  height: 24px;
+  width: 24px;
+  background: url('./icon/instagram.png');
+}
+.line{
+  height: 28px;
+  width: 1px;
+  background-color: mainFontColor;
+  margin: 0 15px;
+}
+.title{
+  background: url('./icon/logo.png');
+  width: 100px;height: 35px;
+  background-size: cover;
+}
+.scrolledContent .line,.scrolledContent .title{
+  display: none;
+}
+.inputField{
+  display: flex;
+  align-items: center;
+  border-radius: 3px;
+}
+.input{
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 125px;height: 28px;
+  width: 215px;
+  z-index: 5;
+  cursor: text;
+  position: absolute;
+  background-color: #fafafa;color: #999;
+  border: solid 1px #dbdbdb;
+  font-size: 14px;
+  font-weight: 300;
+}
+.searchIcon{
+  background: url(./icon/search.png);
+  width: 10px;
+  height: 10px;
+  background-size: cover;
+}
+.inputText{
+  margin-left: 7px;
+}
+.search{
+  height: 28px;
+  min-width: 125px;
+  width: 215px;
+  padding-left: 25px;
+  outline: none;
+  border: solid 1px #dbdbdb;
+}
+
+.searchBtn{
+  position: absolute;
+  margin-left: 10px;
+  background: url(./icon/search.png);
+  width: 10px;
+  height: 10px;
+  background-size: cover;
+}
+.icons{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+
+}
+.iconItem{
+  width: 24px;
+  height: 24px;
+  background-color: red;
+  margin-left: 25px;
+}
+.iconItem:nth-child(1){
+  background:url('./icon/compass.png');
+}
+.iconItem:nth-child(2){
+  background:url('./icon/like.png');
+}
+.iconItem:nth-child(3){
+  background:url('./icon/avatar.png');
 }

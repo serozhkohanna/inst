@@ -1,12 +1,12 @@
-import React, {Component} from 'react';
+import React from 'react';
 import styles from './Body.css';
 import User from '../User/User.jsx';
+import Linked from '../Content/Linked.jsx';
 
-class Body extends Component{
-  render(){
-    return <section>
+const Body = () =>{
+  return <section>
       <User />
-    </section>;
-  }
+      <Linked />
+  </section>;
 }
-export default Body
+export default Body;

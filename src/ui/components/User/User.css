@@ -1,5 +1,3 @@
-*{margin: 0; padding: 0; box-sizing: border-box;}
-
 .content{
   width: 100%;
   background-color: #FAFAFA;
@@ -31,19 +29,44 @@
 
   justify-content: flex-start;
   width: 100%;
+  color: #262626;
 }
 .description .userName{
   display: flex;
   flex-direction: row;
   margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 32px;
+}
+.description .userName .title{
+  margin-right: 7px;
 }
 .description .followers{
   display: flex;
   flex-direction: row;
   margin-bottom: 20px;
 }
+.description .followers .followersList{
+  margin-right: 40px;
+  font-size: 16px;
+}
+.description .followers .followersList .data{
+  font-weight: 600;
+
+}
 .description .about{
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+.description .about .name{
+  font-weight: 600;
+}
+.link{
+  font-weight: 600;
+  text-decoration: none;
 }

@@ -1,4 +1,32 @@
+@value whiteBasic from '../../../../css/colors.css';
+@value blueBtn from '../../../../css/colors.css';
+
 .addComment{
-  margin-top: 10px;
-  padding: 0 16px;
+  height: 100%; width: 100%;
+  border-top: 1px solid #efefef;
+  margin-top: 8px;
+  min-height: 56px;
+  display: flex;
+  align-items: stretch;
+  background-color: whiteBasic;
+}
+.addComment input{
+  align-self: center;
+  height: 20px;
+  border: none;
+  width: 100%;
+  outline: none;
+}
+.notActive,.active {
+  color: blueBtn;
+  opacity: .3;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 600;
+  background-color: whiteBasic;
+}
+.active{
+  opacity: 1;
 }

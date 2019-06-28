@@ -1,6 +1,83 @@
-.followed{
-  background-color: blue;
+@value mainFontColor from '../../../css/colors.css';
+@value blueBtn from '../../../css/colors.css';
+@value whiteBasic from '../../../css/colors.css';
+
+.unfollowed{
+  padding: 0 12px;
+  border: 1px solid #3897f0;
+  color: mainFontColor;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 26px;
+  background-color: blueBtn;
+  color: white;
+  margin: 0 5px;
+  border-radius: 3px;
+  outline: none;
 }
-.followed, .unfollowed{
-  padding: 0px 24px;
+.followed{
+  padding: 0 12px;
+  border: 1px solid #dbdbdb;
+  color: mainFontColor;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 26px;
+  background-color: whiteBasic;
+  margin: 0 5px;
+  border-radius: 3px;
+  outline: none;
+}
+.report{
+  width: 26px;height: 26px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  background-color: transparent;
+  color: mainFontColor;
+  border: none;
+  outline: none;
+}
+.comment, .share, .outline, .filled{
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+.comment{
+  background: url('./icon/chat.png')
+}
+.share{
+  background: url('./icon/share.png')
+}
+.outline{
+  background: url('./icon/like.png');
+}
+@keyframes like {
+  0% {transform: scale(1)}
+  25% {transform: scale(1.2)}
+  50% {transform: scale(.95)}
+  100% {transform: scale(1)}
+}
+.filled{
+  background: url('./icon/likeFilled.png');
+  animation-name: like;
+  animation-duration: .45s;
+  animation-timing-function: ease-in-out;
+}
+.close{
+  width: 16px;
+  height: 16px;
+  background: url('./icon/cancel.png');
+  background-position: center;
+}
+.nextArrow{
+  width: 24px;
+  height: 24px;
+  background: url('./icon/next.png');
+  cursor: pointer;
+}
+.prevButton{
+  width: 24px;
+  height: 24px;
+  background: url('./icon/prev.png');
+  cursor: pointer;
 }
