@@ -1,0 +1,38 @@
+@value white-greyBackground from '../../../../css/colors.css';
+@value light-greyFontColor from '../../../../css/colors.css';
+@value mainFontColor from '../../../../css/colors.css';
+@value white-greyBorder from '../../../../css/colors.css';
+
+.linked, .tagged{
+  width: 100%;
+  background-color: white-greyBackground;
+}
+
+.list{
+  border-top: 1px solid white-greyBorder;
+  width: 100%;
+  max-width: 975px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+.listItem, .checked{
+  margin:0 30px;
+  font-size: 12px;font-weight: 600;
+  height: 100%;
+  display: flex;
+  color: mainFontColor;
+  align-items: center;
+  cursor: pointer;
+}
+
+.listItem{
+  border-top: 1px solid mainFontColor;
+}
+
+.checked{
+  color: light-greyFontColor;
+}

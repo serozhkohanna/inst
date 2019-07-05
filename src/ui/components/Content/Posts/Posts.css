@@ -1,0 +1,59 @@
+@value white-greyBackground from '../../../../css/colors.css';
+@value whiteBasic from '../../../../css/colors.css';
+@value white-greyBorder from '../../../../css/colors.css';
+
+.posts{
+  width: 100%;
+  background-color: white-greyBackground;
+}
+
+.grid{
+  max-width: 975px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,300px));
+  grid-template-rows: minmax(0,300px);
+  justify-content: center;
+  grid-gap: 28px;
+  margin-bottom: 10px;
+  @media (--media-tablet-s) {
+      grid-gap: 3px;
+  }
+}
+
+.photoes{
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.img{
+  max-height: 300px;
+  height: auto;
+}
+
+.overlay{
+  position: absolute;
+  top: 0;left: 0;right: 0;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+  opacity: 0;
+  transition: .5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: whiteBasic;
+}
+
+.overlay:hover{
+  opacity: 1;
+}
+
+.icon{
+  margin: 0 10px;
+}
+
+.amount{
+  margin-right: 20px;
+}

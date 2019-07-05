@@ -14,10 +14,10 @@ delete window.__PRELOADED_STATE__;
 const store = getStore(preloadedState);
 
 hydrate(
-    <Provider store={store}>
-        <BrowserRouter>
-            <App />
-        </BrowserRouter>
-    </Provider>,
-    document.getElementById('app')
+	<Provider store={store}>
+		<BrowserRouter>
+			<App />
+		</BrowserRouter>
+	</Provider>,
+	document.getElementById('app')
 );

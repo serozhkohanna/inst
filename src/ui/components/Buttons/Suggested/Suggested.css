@@ -1,0 +1,29 @@
+@value mainFontColor from '../../../../css/colors.css';
+@value blueBtn from '../../../../css/colors.css';
+@value whiteBasic from '../../../../css/colors.css';
+
+.unfollowed{
+  padding: 0 12px;
+  border: 1px solid #3897f0;
+  color: mainFontColor;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 26px;
+  background-color: blueBtn;
+  color: white;
+  margin: 0 5px;
+  border-radius: 3px;
+  outline: none;
+}
+.followed{
+  padding: 0 12px;
+  border: 1px solid #dbdbdb;
+  color: mainFontColor;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 26px;
+  background-color: whiteBasic;
+  margin: 0 5px;
+  border-radius: 3px;
+  outline: none;
+}

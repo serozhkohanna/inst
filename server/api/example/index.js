@@ -6,6 +6,6 @@ import { getPoints } from './service';
 const router = express.Router();
 
 router.route('/get-points')
-    .get(getPoints);
+	.get(getPoints);
 
 export default router;

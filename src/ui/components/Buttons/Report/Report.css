@@ -1,0 +1,12 @@
+@value mainFontColor from '../../../../css/colors.css';
+
+.report{
+  width: 26px;height: 26px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  background-color: transparent;
+  color: mainFontColor;
+  border: none;
+  outline: none;
+}

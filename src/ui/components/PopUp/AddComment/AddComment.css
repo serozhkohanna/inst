@@ -1,9 +1,10 @@
 @value whiteBasic from '../../../../css/colors.css';
 @value blueBtn from '../../../../css/colors.css';
+@value white-greyBorder from '../../../../css/colors.css';
 
 .addComment{
   height: 100%; width: 100%;
-  border-top: 1px solid #efefef;
+  border-top: 1px solid white-greyBorder;
   margin-top: 8px;
   min-height: 56px;
   display: flex;

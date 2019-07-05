@@ -1,13 +1,17 @@
 @value whiteBasic from '../../../css/colors.css';
 @value mainFontColor from '../../../css/colors.css';
+@value light-greyFontColor from '../../../css/colors.css';
+@value white-greyBackground from '../../../css/colors.css';
+@value dark-greyBorder from '../../../css/colors.css';
 
 .content, .scrolledContent{
   width: 100%;
   background-color: whiteBasic;
   position: fixed;
   z-index: 666;
-  border-bottom: 1px solid rgba(0,0,0,.0975)
+  border-bottom: 1px solid rgba(0,0,0,.0975);
 }
+
  .scrolledContent .nav, .content .nav{
   background-color: whiteBasic;
   max-width: 1010px;
@@ -21,40 +25,51 @@
   align-items: center;
   transition: height .35s ease-in-out;
 }
+
 .scrolledContent .nav{
   height: 52px;width: 100%;
   transition: height .35s ease-in-out;
 }
+
 .label{
   display: flex;
   justify-content: flex-start;
   align-items: center;
   width: 100%;
 }
+
 .logo{
   height: 24px;
   width: 24px;
   background: url('./icon/instagram.png');
 }
+
 .line{
   height: 28px;
   width: 1px;
   background-color: mainFontColor;
   margin: 0 15px;
 }
+
 .title{
   background: url('./icon/logo.png');
   width: 100px;height: 35px;
   background-size: cover;
 }
+
 .scrolledContent .line,.scrolledContent .title{
   display: none;
 }
+
 .inputField{
   display: flex;
   align-items: center;
   border-radius: 3px;
+  @media (--media-phone) {
+      display: none;
+  }
 }
+
 .input{
   border-radius: 3px;
   display: flex;
@@ -65,8 +80,8 @@
   z-index: 5;
   cursor: text;
   position: absolute;
-  background-color: #fafafa;color: #999;
-  border: solid 1px #dbdbdb;
+  background-color: white-greyBackground;color: light-greyFontColor;
+  border: solid 1px dark-greyBorder;
   font-size: 14px;
   font-weight: 300;
 }
@@ -85,7 +100,7 @@
   width: 215px;
   padding-left: 25px;
   outline: none;
-  border: solid 1px #dbdbdb;
+  border: solid 1px dark-greyBorder;
 }
 
 .searchBtn{
@@ -101,8 +116,8 @@
   justify-content: flex-end;
   align-items: center;
   width: 100%;
-
 }
+
 .iconItem{
   width: 24px;
   height: 24px;

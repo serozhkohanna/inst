@@ -21,8 +21,3 @@ class App extends Component {
 }
 
 export default withRouter(App);
-  // <Route path='/' component={Linked} />
-// <Route path='/p/:post_id' component={PopUp} />
-// <Route path='/tagged/p/:post_id' component={PopUp} />
-// <Route path='/' component={Posts} />
-// <Route path='/tagged/' component={Tagged} />

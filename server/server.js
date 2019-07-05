@@ -25,8 +25,8 @@ const app = express();
 
 // static
 app.get(/\.chunk\.(js|css)$/, expressStaticGzip(rootPath, {
-    enableBrotli: true,
-    orderPreference: ['br']
+	enableBrotli: true,
+	orderPreference: ['br']
 }));
 app.use(compression());
 app.use(express.static(rootPath));
@@ -39,34 +39,34 @@ app.use('/api/example', exampleApi);
 
 // index
 app.get('*', function (req, res) {
-    const store = getStore();
+	const store = getStore();
 
-    Promise.all(map(
-        actionFunc => {
-            return actionFunc(req)(store.dispatch);
-        },
-        actions
-    ))
-        .then(() => {
-            const context = {};
-            const html = renderToString(
-                <Provider store={store}>
-                    <StaticRouter
-                        location={req.originalUrl}
-                        context={context}
-                    >
-                        <App />
-                    </StaticRouter>
-                </Provider>
-            );
-            const helmet = Helmet.renderStatic();
-            const preloadedState = store.getState();
-            const page = renderPage(html, helmet, preloadedState);
+	Promise.all(map(
+		actionFunc => {
+			return actionFunc(req)(store.dispatch);
+		},
+		actions
+	))
+		.then(() => {
+			const context = {};
+			const html = renderToString(
+				<Provider store={store}>
+					<StaticRouter
+						location={req.originalUrl}
+						context={context}
+					>
+						<App />
+					</StaticRouter>
+				</Provider>
+			);
+			const helmet = Helmet.renderStatic();
+			const preloadedState = store.getState();
+			const page = renderPage(html, helmet, preloadedState);
 
-            res.send(page);
-        });
+			res.send(page);
+		});
 });
 
 app.listen(PORT, function () {
-    console.log('listening on port', PORT); // eslint-disable-line no-console
+	console.log('listening on port', PORT); // eslint-disable-line no-console
 });

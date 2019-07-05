@@ -5,9 +5,9 @@ import guest from './guest';
 import allPosts from './allPosts';
 
 const reducers = combineReducers({
-    user,
-    guest,
-    allPosts
+	user,
+	guest,
+	allPosts
 });
 
 export default reducers;

@@ -1,15 +1,27 @@
+@value dark-greyBorder from '../../../css/colors.css';
+@value white-greyBackground from '../../../css/colors.css';
+@value whiteBasic from '../../../css/colors.css';
+
 .content{
   width: 100%;
-  background-color: #FAFAFA;
+  background-color: white-greyBackground;
+    @media (--media-tablet-s) {
+        background-color: whiteBasic;
+    }
 }
+
 .body{
   width: 100%;
   max-width: 975px;
   margin: 0px auto;
-  padding: 130px 20px 0;
-  padding-bottom: 30px;
+  padding: 130px 20px 30px 0 ;
   display: flex;
+    @media (--media-tablet-s) {
+        display: block;
+        padding: 100px 16px 0 16px;
+    }
 }
+
 .userPic{
   margin-right: 30px;
   flex-basis: 450px;
@@ -17,10 +29,19 @@
   display: flex;
   justify-content: center;
   align-self: flex-start;
+    @media (--media-tablet-s) {
+        max-width: 90px;
+        flex-basis: 0;
+        float: left;
+    }
 }
+
 .img{
   max-width: 150px;
   border-radius: 50%;
+    @media (--media-tablet-s) {
+        max-width: 77px;
+    }
 }
 
 .description{
@@ -30,42 +51,75 @@
   justify-content: flex-start;
   width: 100%;
   color: #262626;
+    @media (--media-tablet-s) {
+      display: block;
+    }
 }
-.description .userName{
+
+.userName{
   display: flex;
-  flex-direction: row;
   margin-bottom: 20px;
   font-size: 28px;
   font-weight: 300;
   line-height: 32px;
+    @media (--media-tablet-s) {
+      flex-wrap: wrap;
+    }
+    @media (--media-phone) {
+      flex-wrap: wrap;
+    }
 }
-.description .userName .title{
-  margin-right: 7px;
-}
-.description .followers{
+
+.buttons{
   display: flex;
-  flex-direction: row;
+    @media (--media-phone) {
+      order: 1;
+    }
+}
+
+ .title{
+  margin-right: 7px;
+    @media (--media-phone-s) {
+      max-width: 65%;
+      overflow-x: hidden;
+    }
+}
+
+.followers{
+  display: flex;
   margin-bottom: 20px;
 }
-.description .followers .followersList{
+
+.followersList{
   margin-right: 40px;
   font-size: 16px;
+    @media (--media-tablet-s) {
+      font-size: 14px;
+      text-align: center;
+    }
 }
-.description .followers .followersList .data{
+
+.data{
   font-weight: 600;
 
 }
-.description .about{
+
+.about{
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
   font-size: 16px;
   line-height: 24px;
   word-wrap: break-word;
+    @media (--media-tablet-s) {
+      font-size: 14px;
+    }
 }
-.description .about .name{
+
+.name{
   font-weight: 600;
 }
+
 .link{
   font-weight: 600;
   text-decoration: none;
