@@ -36,4 +36,4 @@ const mapStateToProps = (state) => {
         posted: state.allPosts
     };
 };
-export default connect(mapStateToProps, mapDispatchToProps => ({}))(Header);
+export default connect(mapStateToProps)(Header);

@@ -9,12 +9,12 @@ import PropTypes from 'prop-types';
 const Posts = (props) => {
 	return (
 		<section>
-			<div className = {styles.posts}>
-				<div className = {styles.grid}>
+			<div className={styles.posts}>
+				<div className={styles.grid}>
 					{props.posts.map((item, index) => {
 						return (
-							<div key = {index} className={styles.photoes}>
-								<Link to={'/p/' + item.id}>
+							<div key={index} className={styles.photoes}>
+								<Link to={`/p/${item.id}`}>
 									<img src={item.photo} className={styles.img} />
 									<div className={styles.overlay}>
 										<img src={like} className={styles.icon} />

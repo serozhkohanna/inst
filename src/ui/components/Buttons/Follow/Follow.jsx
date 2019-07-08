@@ -9,11 +9,12 @@ class Follow extends Component {
   static propTypes={
     userFollowers:PropTypes.number.isRequired,
     followers:PropTypes.oneOfType([
-        PropTypes.string, 
+        PropTypes.string,
         PropTypes.array
     ]),
     user:PropTypes.string.isRequired
   }
+
   handleClick = () => {
       let {user, userFollowers, follow, unFollow, followers} = this.props;
       if (followers.some((item) => item === user)) {
@@ -22,6 +23,7 @@ class Follow extends Component {
           follow(user,userFollowers);
       }
   }
+  
   render () {
       let follow = this.props.followers.some((item) => item === this.props.user);
       return <section>

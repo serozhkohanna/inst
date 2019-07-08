@@ -26,14 +26,15 @@ class Linked extends Component {
     };
 
   render () {
-    let posts = !this.state.tagged
+    let {tagged} = this.state;
+    let posts = !tagged
         ? this.props.posts.filter(item => item.user === 'leonardodicaprio')
         : this.props.posts.filter(item => item.tagged == 'leonardodicaprio');
     return <section>
           <div className = {styles.linked}>
               <ul className = {styles.list}>
-                  <li onClick = {this.handlePostClick} className={this.state.tagged ? styles.checked : styles.listItem}>POSTS </li>
-                  <li onClick = {this.handleTaggedClick} className={!this.state.tagged ? styles.checked : styles.listItem}> TAGGED</li>
+                  <li onClick = {this.handlePostClick} className={tagged ? styles.checked : styles.listItem}>POSTS </li>
+                  <li onClick = {this.handleTaggedClick} className={!tagged ? styles.checked : styles.listItem}> TAGGED</li>
               </ul>
               {<Posts posts = {posts} />}
           </div>

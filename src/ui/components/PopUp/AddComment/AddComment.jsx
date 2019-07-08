@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styles from './AddComment.css';
 import { connect } from 'react-redux';
 import addComment from '../../../../actions/addComment.js';
+const ENTER_BUTTON = 13;
 
 class AddComment extends Component {
     state = {
@@ -24,25 +25,26 @@ class AddComment extends Component {
     }
 
     enterKey = e => {
-        if (e.keyCode === 13) {
+        if (e.keyCode === ENTER_BUTTON) {
             this.handleClick();
         }
     }
     render () {
+      let {comment} = this.state
         return (
             <section>
                 <div className = {styles.addComment}>
                     <input
                         maxLength='100'
                         placeholder='add comment'
-                        ref={(input) => this.onChange = input}
+                        value={comment}
                         onChange={this.handleChange}
                         onKeyDown={this.enterKey}
                     />
                     <button
                         onClick={this.handleClick}
-                        disabled={!this.state.comment}
-                        className={!this.state.comment ? styles.notActive : styles.active}>Post
+                        disabled={!comment}
+                        className={!comment ? styles.notActive : styles.active}>Post
                     </button>
                 </div>
             </section>

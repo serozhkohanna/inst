@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styles from './Header.css';
+const SMALL_HEADER_SCROLL_MIN = 60;
 
 class Header extends Component {
   state = {
@@ -18,7 +19,7 @@ class Header extends Component {
   }
 
   handleScroll = e => {
-      if (window.pageYOffset > 60) {
+      if (window.pageYOffset > SMALL_HEADER_SCROLL_MIN) {
         this.setState({
             isScrolled: true,
           });
@@ -42,24 +43,25 @@ class Header extends Component {
       }
     };
   render () {
+    const {isScrolled,inputZoom} = this.state;
     return <section>
-          <div className = {this.state.isScrolled ? styles.scrolledContent : styles.content}>
-              <nav className = {styles.nav}>
-                  <div className = {styles.label}>
+          <div className={isScrolled ? styles.scrolledContent : styles.content}>
+              <nav className={styles.nav}>
+                  <div className={styles.label}>
                       <span className={styles.logo}></span>
-                      <div className={styles.line} ></div>
+                      <div className={styles.line}></div>
                       <p className={styles.title}></p>
                   </div>
-                  <div className = {styles.inputField} ref={(inputField) => this.inputField = inputField}  >
+                  <div className={styles.inputField} ref={(inputField) => this.inputField = inputField}  >
                       <input placeholder='Search' type='text' className={styles.search} ref={(input) => this.input = input} />
-                      {!this.state.inputZoom
-                        ? <div className={styles.input} >
+                      {!inputZoom
+                        ? <div className={styles.input}>
                               <p className={styles.searchIcon}></p>
                               <p className={styles.inputText}>Search</p>
                           </div>
                         : <p className={styles.searchBtn}></p>}
                   </div>
-                  <ul className = {styles.icons}>
+                  <ul className={styles.icons}>
                       <li className={styles.iconItem}></li>
                       <li className={styles.iconItem}></li>
                       <li className={styles.iconItem}></li>
