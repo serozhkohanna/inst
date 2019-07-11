@@ -8,7 +8,7 @@ import './css/main.css';
 import MainPage from './ui/pages/MainPage/MainPage.jsx';
 import PopUp from './ui/components/PopUp/PopUp.jsx';
 
-import { Switch, Route, withRouter } from 'react-router-dom';
+import { Route, withRouter } from 'react-router-dom';
 
 @media
 class App extends Component {

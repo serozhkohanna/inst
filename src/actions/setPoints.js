@@ -1,7 +1,5 @@
-import { SET_POINTS } from '../types/types';
-
 const setPoints = payload => ({
-	type: SET_POINTS,
+	type: 'SET_POINTS',
 	payload
 });
 

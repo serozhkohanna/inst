@@ -42,6 +42,7 @@ class Header extends Component {
           });
       }
     };
+
   render () {
     const {isScrolled,inputZoom} = this.state;
     return <section>

@@ -1,31 +1,37 @@
 import React, { Component } from 'react';
 import styles from './Comments.css';
-import Verify from '../../Verify/Verify.jsx';
+import PropTypes from 'prop-types';
 
 class Comments extends Component {
+	static propTypes = {
+        comments: PropTypes.array,
+				post:PropTypes.object
+    };
+
+  static defaultProps = {
+        post: {},
+				comments:[]
+    };
+
 	render () {
 		const { post } = this.props;
-		let comments = post.map(item => item.comments);
+		const comments = post.comments;
 		return (
 			<section>
-				<div className = {styles.comments}>
-					{post.map((item, index) => {
+				<div className={styles.comments}>
+					<div className={styles.description}>
+						<img src={post.userPic} alt = 'pho' className={styles.img} />
+						<div>
+							<span className={styles.userName}>
+								{post.user}
+							</span> {post.description}
+						</div>
+					</div>
+					{comments.map((item, index) => {
 						return (
-							<div key = {index} className = {styles.description}>
-								<img src = {item.userPic} alt = 'pho' className = {styles.img} />
-								<div>
-									<span className={styles.userName}>
-										{item.user}
-									</span> {item.description}
-								</div>
-							</div>
-						);
-					})}
-					{comments[0].map((item, index) => {
-						return (
-							<div key = {index} className = {styles.userComments}>
-								<img src = {item.userPic} alt = 'pho' className = {styles.img} />
-								<div><span className={styles.userName}>{item.user} </span> {item.comment} </div>
+							<div key={index} className={styles.userComments}>
+								<img src={item.userPic} alt='pho' className={styles.img} />
+								<div><span className={styles.userName}>{item.user}</span>{item.comment}</div>
 							</div>
 						);
 					})}

@@ -10,13 +10,13 @@ import PropTypes from 'prop-types';
 const User = (props) => {
 	const { userName, profilePhoto, posts, followers, followings, description, verified } = props.bio;
 	return <section>
-		<div className = {styles.content}>
-			<div className = {styles.body}>
-				<div className = {styles.userPic}>
-					<span className = {styles.photoContainer}><img src = {profilePhoto} alt = 'userpic' className = {styles.img} /></span>
+		<div className={styles.content}>
+			<div className={styles.body}>
+				<div className={styles.userPic}>
+					<span className={styles.photoContainer}><img src={profilePhoto} alt='userpic' className={styles.img}/></span>
 				</div>
-				<div className = {styles.description}>
-					<div className = {styles.userName}>
+				<div className={styles.description}>
+					<div className={styles.userName}>
 						<h1 className={styles.title}>{userName}</h1>
 						{verified && <Verify />}
 						<div className={styles.buttons}>
@@ -25,15 +25,15 @@ const User = (props) => {
 						</div>
 						<Report />
 					</div>
-					<ul className = {styles.followers}>
+					<ul className={styles.followers}>
 						<li className={styles.followersList}><span className={styles.data}>{posts}</span> posts</li>
 						<li className={styles.followersList}><span className={styles.data}>{followers}</span> followers</li>
 						<li className={styles.followersList}><span className={styles.data}>{followings}</span> following</li>
 					</ul>
-					<div className = {styles.about}>
+					<div className={styles.about}>
 						<h1 className={styles.name}>{description.name}</h1>
 						<p>{description.about}</p>
-						<a href = {`https://${description.link}`} className={styles.link}>{description.link}</a>
+						<a href={`https://${description.link}`} className={styles.link}>{description.link}</a>
 					</div>
 				</div>
 			</div>
@@ -42,24 +42,12 @@ const User = (props) => {
 };
 
 User.propTypes = {
-	bio: PropTypes.shape({
-		userName: PropTypes.string.isRequired,
-		profilePhoto: PropTypes.string.isRequired,
-		posts: PropTypes.number.isRequired,
-		followers: PropTypes.number.isRequired,
-		followings: PropTypes.number.isRequired,
-		verified: PropTypes.bool.isRequired,
-		description: PropTypes.shape({
-			name: PropTypes.any,
-			about: PropTypes.any,
-			link: PropTypes.any,
-		}),
-	}),
+	bio: PropTypes.object.isRequired
 };
 
-const mapStateToProps = (state) => {
+const mapStateToProps = ({user}) => {
 	return {
-		bio: state.user,
+		bio: user,
 	};
 };
 

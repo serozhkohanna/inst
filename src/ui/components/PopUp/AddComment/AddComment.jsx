@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styles from './AddComment.css';
 import { connect } from 'react-redux';
 import addComment from '../../../../actions/addComment.js';
+import PropTypes from 'prop-types';
 const ENTER_BUTTON = 13;
 
 class AddComment extends Component {
@@ -9,13 +10,22 @@ class AddComment extends Component {
         comment: ''
     }
 
+    static propTypes={
+      userData:PropTypes.object,
+      postID:PropTypes.oneOfType([PropTypes.string,PropTypes.number]),
+      addComment:PropTypes.func.isRequired
+    }
+
+    static defaultProps={
+      userData:{}
+    }
+
     handleClick = (e) => {
-        let { postID } = this.props;
-        this.props.addComment(this.props.userData.userName, this.props.userData.userPic, this.state.comment, postID - 1);
+        let { postID, userData } = this.props;
+        this.props.addComment(userData.userName, userData.userPic, this.state.comment, postID - 1);
         this.setState({
             comment: ''
         });
-        this.onChange.value = '';
     }
 
     handleChange = (e) => {
@@ -24,22 +34,22 @@ class AddComment extends Component {
         });
     }
 
-    enterKey = e => {
+    handleEnter = e => {
         if (e.keyCode === ENTER_BUTTON) {
             this.handleClick();
         }
     }
     render () {
-      let {comment} = this.state
+      let {comment} = this.state;
         return (
             <section>
                 <div className = {styles.addComment}>
                     <input
                         maxLength='100'
-                        placeholder='add comment'
+                        placeholder='Add a comment...'
                         value={comment}
                         onChange={this.handleChange}
-                        onKeyDown={this.enterKey}
+                        onKeyDown={this.handleEnter}
                     />
                     <button
                         onClick={this.handleClick}

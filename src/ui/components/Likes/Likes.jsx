@@ -1,22 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styles from './Likes.css';
-import { connect } from 'react-redux';
 
-class Likes extends Component {
-	render () {
-		const { postID, likes } = this.props;
-		return (
-			<section>
-				<div className = {styles.likes}>
-					{likes[postID - 1].likes} likes
-				</div>
-			</section>
-		);
-	}
-}
-const mapStateToProps = state => {
-	return {
-		likes: state.allPosts
-	};
-};
-export default connect(mapStateToProps)(Likes);
+const Likes = (props) =><div className={styles.likes}>{props.post.likes} likes</div>;
+
+export default Likes;

@@ -6,7 +6,7 @@ import request from 'superagent';
 export default function getPoints () {
 	return dispatch => base(
 		request
-			.get('/api/example/get-points')
+			.get('/api/example/service')
 	)
 		.then(payload => {
 			return dispatch(setPoints(payload));

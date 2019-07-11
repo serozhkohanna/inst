@@ -21,6 +21,3 @@ const mapStateToProps = ({ guest, user }) => {
 	};
 };
 export default connect(mapStateToProps)(Suggested);
-
-
-	

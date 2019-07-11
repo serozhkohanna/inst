@@ -5,6 +5,10 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 class Linked extends Component {
+  static propTypes={
+    posts:PropTypes.array
+  }
+
   static defaultProps={
       posts: [],
     };

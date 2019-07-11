@@ -6,7 +6,7 @@ import dislike from '../../../../actions/dislike';
 import PropTypes from 'prop-types';
 
 class Like extends Component {
-  static propTypes ={
+  static propTypes={
     likes:PropTypes.oneOfType([
         PropTypes.number,
         PropTypes.array
@@ -20,7 +20,7 @@ class Like extends Component {
       let { postID, likes, like, dislike, liked } = this.props;
       let li = likes[postID - 1].likes;
 
-      if (liked.some(item => item == postID)) {
+      if (liked.some(item => item === +postID)) {
           dislike(likes[postID - 1].likes, postID - 1);
       } else {
           like(likes[postID - 1].likes, postID - 1);

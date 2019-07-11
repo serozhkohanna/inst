@@ -1,9 +1,13 @@
 @value white-greyBorder from '../../../../css/colors.css';
+@value mainFontColor from '../../../../css/colors.css';
 
 .comments{
   width: 100%;
-  padding: 16px 10px 36px 0;
+  padding: 16px 10px 26px 0;
   border-bottom: 1px solid white-greyBorder;
+  line-height: 18px;
+  font-size: 14px;
+  color: mainFontColor;
 }
 
 .comments .description{

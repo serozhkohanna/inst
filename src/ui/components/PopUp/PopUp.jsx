@@ -11,47 +11,49 @@ import PropTypes from 'prop-types';
 
 class PopUp extends Component {
 	static defaultProps={
-      posts: [],
-			post:[]
+      posts: []
     };
 	render ()  {
-		let nextPostLink, prevPostLink;
-		let arrayPosts = [], arrayPostsPrev = [];
-		let post = this.props.post.filter(item => item.id == this.props.match.params.post_id);
+		let {posts} = this.props;
+	 	let newArrPost, next, prev, postIndex;
+		let post = posts.filter(item => item.id === +this.props.match.params.post_id);
 		let postID = this.props.match.params.post_id;
 
-		for (var i = post[0].id; i < this.props.post.length; i++) {
-			arrayPosts.push(this.props.post[i].id);
+		if (post[0].user === 'leonardodicaprio') {
+			 newArrPost = posts.filter(item => item.user === 'leonardodicaprio');
+			 postIndex = newArrPost.indexOf(post[0]);
+			 next = newArrPost[postIndex+1] !== undefined ? newArrPost[postIndex+1].id : newArrPost[postIndex].id;
+			 prev = newArrPost[postIndex-1] !== undefined ? newArrPost[postIndex-1].id : newArrPost[postIndex].id
+		}else{
+			newArrPost = posts.filter(item => item.tagged == 'leonardodicaprio');
+			postIndex = newArrPost.indexOf(post[0]);
+			next = newArrPost[postIndex+1] !== undefined ? newArrPost[postIndex+1].id : newArrPost[postIndex].id;
+			prev = newArrPost[postIndex-1] !== undefined ? newArrPost[postIndex-1].id : newArrPost[postIndex].id
 		}
-		for (var i = post[0].id-1; i > 0; i--) {
-			arrayPostsPrev.push(this.props.post[i].id-1);
-		}
-		nextPostLink = arrayPosts[0] || post[0].id;
-		prevPostLink = arrayPostsPrev[0] || post[0].id;
 		return (
 			<section>
-				<div className = {styles.popup} >
+				<div className={styles.popup} >
 					<Link to='/'>
 						<div className={styles.overlay}>
 						</div>
 					</Link>
-					<Link to = {'/p/'+ prevPostLink} className={styles.prevButton}><div></div></Link>
-					<Link to = {'/p/'+ nextPostLink} className={styles.nextButton}><div ></div></Link>
+					<Link to={`/p/${prev}`} className={styles.prevButton}><div></div></Link>
+					<Link to={`/p/${next}`} className={styles.nextButton}><div></div></Link>
 					<Link to='/'><span className={styles.close}></span></Link>
 					<div className={styles.content} >
-						<div className = {styles.photo} >
-							{post.map((item, index) => <img key={index} src={item.photo} className={styles.img} />)}
+						<div className={styles.photo} >
+							 <img src={post[0].photo} className={styles.img} />
 						</div>
-						<div className = {styles.otherBlock} >
-							<div className={styles.headerComponent}><Header post={post} /></div>
-							<div className={styles.commentsComponent}><Comments post={post} /></div>
+						<div className={styles.otherBlock} >
+							<div className={styles.headerComponent}><Header post={post[0]} /></div>
+							<div className={styles.commentsComponent}><Comments post={post[0]} /></div>
 							<ul className={styles.buttons}>
-								<li className={styles.components}><Like post={post} postID={postID} /></li>
+								<li className={styles.components}><Like postID={postID} /></li>
 								<li className={styles.components}><div className={styles.comment}></div></li>
 								<li className={styles.components}><div className={styles.share}></div></li>
 							</ul>
-							<Likes post={post} postID={postID} />
-							<AddComment post={post} postID={postID} />
+							<Likes post={post[0]} />
+							<AddComment postID={postID} />
 						</div>
 					</div>
 				</div>
@@ -61,7 +63,7 @@ class PopUp extends Component {
 }
 const mapStateToProps = ({allPosts}) => {
 	return {
-		post: allPosts,
+		posts: allPosts,
 	};
 };
 export default connect(mapStateToProps)(PopUp);

@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import follow from '../../../../actions/follow.js';
 import unFollow from '../../../../actions/unFollow.js';
 import PropTypes from 'prop-types';
+import getPoints from '../../../../services/getPoints';
 
 class Follow extends Component {
   static propTypes={
@@ -23,13 +24,13 @@ class Follow extends Component {
           follow(user,userFollowers);
       }
   }
-  
+
   render () {
       let follow = this.props.followers.some((item) => item === this.props.user);
       return <section>
           <button
-              onClick = {this.handleClick}
-              className = {follow ? styles.followed : styles.unfollowed}>
+              onClick={this.handleClick}
+              className={follow ? styles.followed : styles.unfollowed}>
               {follow ? 'Following' : 'Follow'}
           </button>
       </section>;
