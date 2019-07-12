@@ -47,6 +47,6 @@ const mapDispatchToProps = (dispatch) => {
     return {
         follow: (user,userFollowers) => dispatch(follow(user,userFollowers)),
         unFollow: (user,userFollowers) => dispatch(unFollow(user,userFollowers))
-    }
+    };
 };
 export default connect(mapStateToProps, mapDispatchToProps)(Follow);

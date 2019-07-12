@@ -11,24 +11,25 @@ import PropTypes from 'prop-types';
 
 class PopUp extends Component {
 	static defaultProps={
-      posts: []
+      posts: [],
+			user:{}
     };
 	render ()  {
-		let {posts} = this.props;
+		let {posts,user} = this.props;
 	 	let newArrPost, next, prev, postIndex;
 		let post = posts.filter(item => item.id === +this.props.match.params.post_id);
 		let postID = this.props.match.params.post_id;
 
-		if (post[0].user === 'leonardodicaprio') {
-			 newArrPost = posts.filter(item => item.user === 'leonardodicaprio');
+		if (post[0].user === user.userName) {
+			 newArrPost = posts.filter(item => item.user === user.userName);
 			 postIndex = newArrPost.indexOf(post[0]);
 			 next = newArrPost[postIndex+1] !== undefined ? newArrPost[postIndex+1].id : newArrPost[postIndex].id;
-			 prev = newArrPost[postIndex-1] !== undefined ? newArrPost[postIndex-1].id : newArrPost[postIndex].id
+			 prev = newArrPost[postIndex-1] !== undefined ? newArrPost[postIndex-1].id : newArrPost[postIndex].id;
 		}else{
-			newArrPost = posts.filter(item => item.tagged == 'leonardodicaprio');
+			newArrPost = posts.filter(item => item.tagged === user.userName);
 			postIndex = newArrPost.indexOf(post[0]);
 			next = newArrPost[postIndex+1] !== undefined ? newArrPost[postIndex+1].id : newArrPost[postIndex].id;
-			prev = newArrPost[postIndex-1] !== undefined ? newArrPost[postIndex-1].id : newArrPost[postIndex].id
+			prev = newArrPost[postIndex-1] !== undefined ? newArrPost[postIndex-1].id : newArrPost[postIndex].id;
 		}
 		return (
 			<section>
@@ -52,8 +53,8 @@ class PopUp extends Component {
 								<li className={styles.components}><div className={styles.comment}></div></li>
 								<li className={styles.components}><div className={styles.share}></div></li>
 							</ul>
-							<Likes post={post[0]} />
-							<AddComment postID={postID} />
+							<Likes post={post[0]}/>
+							<AddComment postID={postID}/>
 						</div>
 					</div>
 				</div>
@@ -61,9 +62,10 @@ class PopUp extends Component {
 		);
 	}
 }
-const mapStateToProps = ({allPosts}) => {
+const mapStateToProps = ({allPosts, user}) => {
 	return {
 		posts: allPosts,
+		user: user
 	};
 };
 export default connect(mapStateToProps)(PopUp);
