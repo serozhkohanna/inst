@@ -10,7 +10,7 @@ class Suggested extends Component {
 
 	render () {
 		return <section>
-			<button className = {this.props.followers ? styles.followed : styles.unfollowed } > &#x2193;</button>
+			<button className={this.props.followers ? styles.followed : styles.unfollowed } > &#x2193;</button>
 		</section>;
 	}
 }

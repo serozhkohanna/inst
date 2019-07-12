@@ -45,7 +45,7 @@ const initialState = [
 		user: 'leonardodicaprio',
 		verified: true,
 		userPic: 'https://pbs.twimg.com/profile_images/694662257586892802/mdc5ELjj_400x400.jpg',
-		photo: 'https://pp.userapi.com/c850432/v850432431/1628d6/R3l7Swu2oL8.jpg',
+		photo: 'https://pp.userapi.com/c858232/v858232245/13a47/w8tDQrstpn4.jpg',
 		tagged: ['efdds'],
 		description: `#Regram #RG @cnnbusiness:
     Climate change is likely to cost the world’s largest public companies nearly $1 trillion over the next five years.
@@ -116,7 +116,7 @@ const initialState = [
 		user: 'leonardodicaprio',
 		verified: true,
 		userPic: 'https://pbs.twimg.com/profile_images/694662257586892802/mdc5ELjj_400x400.jpg',
-		photo: 'https://pp.userapi.com/c850432/v850432431/1628d6/R3l7Swu2oL8.jpg ',
+		photo: 'https://pp.userapi.com/c858332/v858332518/15b5d/7laIxa5A6B0.jpg',
 		tagged: ['onceinhollywood'],
 		description: 'In theaters July 26th. #OnceUponATimeInHollywood',
 		likes: 435768,
@@ -154,7 +154,7 @@ const initialState = [
 		user: 'leonardodicaprio',
 		verified: true,
 		userPic: 'https://pbs.twimg.com/profile_images/694662257586892802/mdc5ELjj_400x400.jpg',
-		photo: 'https://pp.userapi.com/c850432/v850432431/1628d6/R3l7Swu2oL8.jpg',
+		photo: 'https://pp.userapi.com/c848628/v848628811/1d840c/ScZUqkezwOY.jpg',
 		tagged: ['onceinhollywood'],
 		description: `Did you know that only 15% of the world’s lands are protected?
     We need nature for our continued existence on the planet.
@@ -194,7 +194,7 @@ const initialState = [
 		user: 'momsthatshouldmodel',
 		verified: false,
 		userPic: 'https://image.flaticon.com/icons/svg/181/181549.svg',
-		photo: 'https://pp.userapi.com/c850432/v850432431/1628d6/R3l7Swu2oL8.jpg',
+		photo: 'https://pp.userapi.com/c854320/v854320576/8c480/KebN1P1sp24.jpg',
 		tagged: ['leonardodicaprio'],
 		description: 'Keep laughing, a smile is beautiful 😁 ',
 		likes: 278,
@@ -232,7 +232,7 @@ const initialState = [
 		user: 'momsthatshouldmodel',
 		verified: false,
 		userPic: 'https://image.flaticon.com/icons/svg/181/181549.svg',
-		photo: 'https://pp.userapi.com/c850432/v850432431/1628d6/R3l7Swu2oL8.jpg',
+		photo: 'https://pp.userapi.com/c852128/v852128481/167d87/-5QKWSqGdd4.jpg',
 		tagged: ['leonardodicaprio'],
 		description: `Delicious fish with plastic inside........
     Reduce the use of plastic........
@@ -273,7 +273,7 @@ const initialState = [
 		user: 'paginadedi',
 		verified: false,
 		userPic: 'https://image.flaticon.com/icons/svg/181/181549.svg',
-		photo: 'https://pp.userapi.com/c850432/v850432431/1628d6/R3l7Swu2oL8.jpg',
+		photo: 'https://pp.userapi.com/c849120/v849120143/1cfbe1/SOCyLjfOryQ.jpg',
 		tagged: ['leonardodicaprio'],
 		description: '#leonardodicaprio #leodicaprio #leo #climatechange #serendipity #pantarei #always #happy #joy #love #loveislove #swami ',
 		likes: 1145,
@@ -311,7 +311,7 @@ const initialState = [
 		user: '_leonardo_capri',
 		userPic: 'https://image.flaticon.com/icons/svg/181/181549.svg',
 		verified: false,
-		photo: 'https://pp.userapi.com/c850432/v850432431/1628d6/R3l7Swu2oL8.jpg',
+		photo: 'https://pp.userapi.com/c855624/v855624711/9066e/s_NUBQkX6rs.jpg',
 		tagged: ['leonardodicaprio'],
 		description: 'Bae😍🤤#leonardodicaprio #leonardo #dicaprio #titanic #jackdawsen #jack ',
 		likes: 278933,
@@ -349,7 +349,7 @@ const initialState = [
 		user: 'leonardodicaprio',
 		verified: true,
 		userPic: 'https://pbs.twimg.com/profile_images/694662257586892802/mdc5ELjj_400x400.jpg',
-		photo: 'https://pp.userapi.com/c850432/v850432431/1628d6/R3l7Swu2oL8.jpg',
+		photo: 'https://pp.userapi.com/c853620/v853620897/9120c/2D3K0zRKzx8.jpg ',
 		tagged: ['vcfdd'],
 		description: `#Regram #RG @abcnews:
     Massive 223-ft. shape of a whale made of plastic waste collected from the ocean,
@@ -389,7 +389,7 @@ const initialState = [
 		user: 'leonardodicaprio',
 		verified: true,
 		userPic: 'https://pbs.twimg.com/profile_images/694662257586892802/mdc5ELjj_400x400.jpg',
-		photo: 'https://pp.userapi.com/c850432/v850432431/1628d6/R3l7Swu2oL8.jpg',
+		photo: 'https://pp.userapi.com/c851024/v851024228/16a4c9/oHqJQZjBffs.jpg',
 		tagged: ['vfdv'],
 		description: `#Regram #RG @abcnews:
     Massive 223-ft. shape of a whale made of plastic waste collected from the ocean,
