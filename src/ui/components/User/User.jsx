@@ -41,7 +41,7 @@ const User = (props) => {
 	</section>;
 };
 
-User.propTypes = {
+User.propTypes={
 	bio: PropTypes.object.isRequired
 };
 

@@ -20,7 +20,7 @@ class Comments extends Component {
 			<section>
 				<div className={styles.comments}>
 					<div className={styles.description}>
-						<img src={post.userPic} alt = 'pho' className={styles.img} />
+						<img src={post.userPic} alt='pho' className={styles.img} />
 						<div>
 							<span className={styles.userName}>
 								{post.user}

@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 const ENTER_BUTTON = 13;
 
 class AddComment extends Component {
-    state = {
+    state={
         comment: ''
     }
 

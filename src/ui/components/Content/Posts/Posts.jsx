@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 const Posts = (props) => {
 	let {posts} = props;
 	return (
-		<section> 
+		<section>
 			<div className={styles.posts}>
 				<div className={styles.grid}>
 					{posts.map((item, index) =>{
@@ -31,6 +31,10 @@ const Posts = (props) => {
 			</div>
 		</section>
 	);
+};
+
+Posts.propTypes={
+	posts:PropTypes.array
 };
 
 Posts.defaultProps={

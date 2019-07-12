@@ -33,7 +33,7 @@ class Linked extends Component {
     let {tagged} = this.state;
     let posts = !tagged
         ? this.props.posts.filter(item => item.user === 'leonardodicaprio')
-        : this.props.posts.filter(item => item.tagged == 'leonardodicaprio');
+        : this.props.posts.filter(item => item.tagged === 'leonardodicaprio');
     return <section>
           <div className={styles.linked}>
               <ul className={styles.list}>

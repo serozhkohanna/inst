@@ -3,7 +3,7 @@ import styles from './Header.css';
 const SMALL_HEADER_SCROLL_MIN = 60;
 
 class Header extends Component {
-  state = {
+  state={
       isScrolled: false,
       inputZoom: false,
     };
@@ -44,7 +44,7 @@ class Header extends Component {
     };
 
   render () {
-    const {isScrolled,inputZoom} = this.state;
+    const {isScrolled, inputZoom} = this.state;
     return <section>
           <div className={isScrolled ? styles.scrolledContent : styles.content}>
               <nav className={styles.nav}>
